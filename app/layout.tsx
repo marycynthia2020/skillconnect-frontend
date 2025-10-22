@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import {Poppins, Roboto } from "next/font/google";
+import { Poppins, Roboto} from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/sections/NavBar";
+import Footer from "@/components/sections/Footer";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,8 +20,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "SkillConnect",
-  description: "Connect with skilled artisans near you.",
+  title: "Chinemerem Ugbaja | Fullstack Developer",
+  description: "",
 };
 
 export default function RootLayout({
@@ -27,11 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className= {`${poppins.variable} ${roboto.variable}`}>
-      <body
-        className="antialiased"
-      >
+    <html lang="en" className={`${poppins.variable} ${roboto.variable}`}>
+      <body className="antialiased min-h-screen">
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
