@@ -19,7 +19,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full fixed top-4 md:top-12 z-1 px-4 md:px-0">
+    <nav className="w-full fixed top-4 md:top-12 z-1 px-4 md:px-0 " >
       <div
         className={`w-full max-w-[1440px] mx-auto shadow-2xl  px-5 py-0 md:py-5  flex md:h-auto flex-col gap-y-14 md:flex-row items-center md:justify-between bg-white  ${
           isOpen ? "h-screen" : ""
