@@ -1,3 +1,4 @@
+import UserDashboard from "@/components/dash";
 import About from "@/components/sections/About";
 import CTA from "@/components/sections/CTA";
 import Hero from "@/components/sections/Hero";

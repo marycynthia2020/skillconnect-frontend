@@ -28,7 +28,7 @@ const Hero = () => {
   }, [currentIndex, extendedImages.length]);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden  bg-[url('/plumb.png')] bg-no-repeat bg-cover">
+    <section className="relative w-full h-screen   bg-[url('/plumb.png')] bg-no-repeat bg-cover overflow-hidden ">
       <div className="absolute inset-0 bg-black opacity-60"></div>
       {/* <div
         className={` flex w-full h-full ${

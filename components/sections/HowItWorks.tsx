@@ -1,10 +1,12 @@
+"use client";
+import { useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FiZap } from "react-icons/fi";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { SiGnuprivacyguard } from "react-icons/si";
 
 const WorkingProcess = () => {
-  const steps = [
+   const artisanSteps = [
     {
       number: "01",
       icon: SiGnuprivacyguard,
@@ -27,6 +29,41 @@ const WorkingProcess = () => {
       contact: "We are rooting for you",
     },
   ];
+     const clientSteps = [
+    {
+      number: "01",
+      icon: SiGnuprivacyguard,
+      title: "Sign Up",
+      description: "Create your account in less than a minute",
+      contact: "no complicated process",
+    },
+    {
+      number: "02",
+      icon: CgProfile,
+      title: "Complete your profile",
+      description: "Add your skills to help people find you.",
+      contact: "Complete profile, more clients.",
+    },
+    {
+      number: "03",
+      icon: MdOutlineRocketLaunch,
+      title: "Start Earning",
+      description: "Respond to job requests and start earning.",
+      contact: "We are rooting for you",
+    },
+  ];
+  const [activeTab, setActiveTab] = useState<"artisan" | "client">("artisan");
+  const [steps, setSteps] = useState(artisanSteps);
+
+ 
+  const handleClient = () => {
+    setActiveTab("client");
+    setSteps(clientSteps);
+  };
+   const handleArtisan = () => {
+    setActiveTab("artisan");
+    setSteps(artisanSteps);
+  };
 
   return (
     <section className="w-full mt-10 md:mt-20 bg-gray-100 py-20">
@@ -39,12 +76,37 @@ const WorkingProcess = () => {
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">
             Our Working <span className="">Process</span>
           </h2>
+          <div className="flex border-b border-gray-200 px-6 pt-6 md:w-2/6 2xl:w-1/6 mx-auto shadow-lg rounded-md">
+            <button
+              onClick={() => setActiveTab("artisan")}
+              className={`cursor-pointer flex-1 pb-4 font-semibold transition-all border-none ${
+                activeTab === "artisan"
+                  ? "text-[#000c54] border-b-2 border-[#000c54]"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              Artisans
+            </button>
+            <button
+              onClick={handleClient}
+              className={`cursor-pointer flex-1 pb-4 font-semibold transition-all border-none ${
+                activeTab === "client"
+                  ? "text-[#000c54] border-b-2 border-[#000c54]"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              Clients
+            </button>
+          </div>
         </div>
 
         {/* Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 mb-12 relative">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative  transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(254,178,115,0.4)]">
+            <div
+              key={step.number}
+              className="relative p-5  transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(254,178,115,0.4)]"
+            >
               {/* Step Card */}
               <div className="text-center">
                 {/* Icon with Number */}
