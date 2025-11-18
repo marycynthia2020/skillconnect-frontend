@@ -6,7 +6,7 @@ const router = useRouter()
   return (
     <div>
       <button
-        className="cursor-pointer px-10 py-4 w-full md:w-fit text-white bg-[#000c54] uppercase"
+        className="cursor-pointer px-10 py-4 w-full md:w-fit text-white bg-dark-blue uppercase"
         onClick={() => router.push("/signup")}
       >
         Get Started

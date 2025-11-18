@@ -57,13 +57,13 @@ const SignUpForm = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  username
+                  Phone Number
                 </label>
                 <input
                   type="text"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c3f83] focus:border-transparent outline-none transition-all"
-                  placeholder="Enter your username"
+                  placeholder="Enter your phone number"
                 />
               </div>
 

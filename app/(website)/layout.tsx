@@ -1,9 +1,9 @@
 'use client'
 import { usePathname } from "next/navigation";
-import Footer from "./sections/Footer";
-import NavBar from "./sections/NavBar";
+import Footer from "../../components/public/sections/Footer";
+import NavBar from "../../components/public/sections/NavBar";
 
-const GlobalLayout = ({
+const publicLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -14,9 +14,9 @@ const GlobalLayout = ({
     <div>
       <NavBar />
       {children}
-      {!hideFooter && <Footer />}
+      {!hideFooter && <Footer backgroundColor="#2f2f2f" color="#ffffff" />}
     </div>
   );
 };
 
-export default GlobalLayout;
+export default publicLayout;

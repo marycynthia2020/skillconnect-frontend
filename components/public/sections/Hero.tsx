@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen   bg-[url('/plumb.png')] bg-no-repeat bg-cover overflow-hidden ">
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-y-0 w-[75%] bg-linear-to-r from-black/75  to-transparent "></div>
       {/* <div
         className={` flex w-full h-full ${
           isTransitioning
@@ -52,7 +52,7 @@ const Hero = () => {
       </div> */}
 
       {/* Optional overlay */}
-      <div className="px-5 absolute max-w-[1440px] mx-auto  inset-0 flex items-center  text-white">
+      <div className="px-5 absolute max-w-[1440px] mx-auto  inset-0 flex items-center  text-white fade-in-up">
         <div className="w-full max-w-4xl flex flex-col gap-8 mt-20">
           <h1 className="text-3xl text-balance lg:text-6xl font-bold capitalize  leading-[1.2]  ">
             Welcome to skillConnect where talents meets opportunities
@@ -62,7 +62,7 @@ const Hero = () => {
             trusted talents right in their neighborhood.
           </h4>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <button className="px-10 py-4 border border-transparent font-light w-full md:w-fit text-white bg-[#000c54] uppercase ">
+            <button className="px-10 py-4 border border-transparent font-light w-full md:w-fit text-white bg-dark-blue uppercase ">
               Find talent
             </button>
             <button className="px-10 py-4 w-full md:w-fit text-white  font-light border border-gray-400 uppercase">

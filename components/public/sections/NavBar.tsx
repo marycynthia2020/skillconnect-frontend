@@ -4,8 +4,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import Logo from "../Logo";
-import GetStartedButton from "../GetStartedButton";
+import Logo from "../../shared-component/ui/Logo";
+import GetStartedButton from "../ui/GetStartedButton";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -19,9 +19,9 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full fixed top-4 md:top-12 z-1 px-4 md:px-0 " >
+    <nav className="w-full fixed top-4 md:top-12 z-1 px-4 md:px-0  fade-in-down " >
       <div
-        className={`w-full max-w-[1440px] mx-auto shadow-2xl  px-5 py-0 md:py-5  flex md:h-auto flex-col gap-y-14 md:flex-row items-center md:justify-between bg-white  ${
+        className={`  w-full max-w-[1440px] mx-auto shadow-2xl  px-5 py-0 md:py-5  flex md:h-auto flex-col gap-y-14 md:flex-row items-center md:justify-between bg-white  ${
           isOpen ? "h-screen" : ""
         } `}
       >
@@ -41,7 +41,7 @@ const NavBar = () => {
         {/* navigation */}
         <div
           className={`w-full flex flex-col md:flex-row gap-4 md:items-center  md:justify-between  ${
-            isOpen ? "" : "hidden md:flex "
+            isOpen ? "fade-in-up" : "hidden md:flex  "
           }`}
         >
           <div className="hidden md:block">

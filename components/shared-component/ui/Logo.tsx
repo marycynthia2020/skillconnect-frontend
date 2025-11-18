@@ -10,7 +10,7 @@ const Logo = ({color}: {color:string}) => {
   
   return (
     <Link href= "/" className={`flex flex-col items-center ${comfortaa.className}`} style={{ color }}>
-        <span className='font-bold text-4xl md:text-5xl'>SC</span>
+        <span className='font-bold text-xl md:text-3xl'>SC</span>
         <h3 className=' text-xl -mt-3 font-medium'>SkillConnect</h3>
     </Link>
   )

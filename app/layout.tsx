@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto} from "next/font/google";
 import "./globals.css";
-import GlobalLayout from "@/components/GlobalLayout";
+import { UserProvider } from "@/providers/UserProvider";
 
 
 const poppins = Poppins({
@@ -31,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${roboto.variable}`}>
       <body className="antialiased min-h-screen relative z-[50]">
-        <GlobalLayout>{children}</GlobalLayout>
+        <UserProvider>
+          {children}
+        </UserProvider>
       </body>
     </html>
   );

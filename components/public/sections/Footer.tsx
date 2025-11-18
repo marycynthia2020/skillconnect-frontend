@@ -1,8 +1,8 @@
 import { Mail, Phone } from "lucide-react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import Logo from "../Logo";
+import Logo from "../../shared-component/ui/Logo";
 
-const Footer = () => {
+const Footer = ({backgroundColor, color}: {backgroundColor:string, color: string}) => {
   const quickLinks = [
     { name: "Home", href: "#" },
     { name: "About Us", href: "#" },
@@ -16,7 +16,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" mt-10 md:mt-20 py-20 bg-[#2f2f2f] text-white " id="contact">
+    <footer className=" mt-10 md:mt-20 py-20 " id="contact" style={{backgroundColor, color}}>
       <div className="max-w-[1440px] px-5 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Logo and Contact */}
