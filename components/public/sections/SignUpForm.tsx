@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -29,7 +29,7 @@ const SignUpForm = () => {
           className={`bg-white w-full md:w-1/2 h-1/2 flex items-center justify-center  px-6 py-12 md:p-12 transition-all duration-700 ease-in-out`}
         >
           <div className="w-full max-w-sm">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Sign Up
             </h2>
             <form className="space-y-4">
@@ -88,6 +88,51 @@ const SignUpForm = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c3f83] focus:border-transparent outline-none transition-all"
                   placeholder="••••••••"
                 />
+              </div>
+              {/* gender */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Gender
+                </label>
+                <div className="flex items-center gap-2">
+                  <input type="radio" name="gender" id="" />
+                  <label
+                    className=" text-sm font-medium text-gray-700 "
+                    htmlFor=""
+                  >
+                    Male
+                  </label>
+                  <input type="radio" name="gender" id="" />
+                  <label
+                    className=" text-sm font-medium text-gray-700 "
+                    htmlFor=""
+                  >
+                    Female
+                  </label>
+                </div>
+              </div>
+              {/* role */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Role
+                </label>
+                <div className="flex items-center gap-2">
+                  <input type="radio" name="role" id="" />
+                  <label
+                    className=" text-sm font-medium text-gray-700 "
+                    htmlFor=""
+                  >
+                    Client
+                  </label>
+                  <input type="radio" name="role" id="" />
+
+                  <label
+                    className=" text-sm font-medium text-gray-700 "
+                    htmlFor=""
+                  >
+                    Artisan
+                  </label>
+                </div>
               </div>
               {/* <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">

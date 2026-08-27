@@ -27,7 +27,7 @@ export const ProfileCard = () => {
             Edit
           </button>
         </div>
-        <p className="text-gray-500">I am a fullStack Developer with hands on experience in building applications. I am a fullStack Developer with hands on experience in building applications</p>
+        <p className="text-gray-500">I provide professional painting, electrical, and tiling services with precision and care. Committed to quality and timely work, I help transform spaces efficiently</p>
       </div>
     </article>
   );

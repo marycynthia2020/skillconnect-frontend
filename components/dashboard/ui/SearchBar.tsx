@@ -9,6 +9,8 @@ const SearchBar = () => {
 
   const categories = [
     "Location",
+    "argentina", 
+    "pparis" 
     
   ];
 
